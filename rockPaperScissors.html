@@ -6,8 +6,41 @@
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
-    console.log("Hello, World!")
+    function computerPlay() {
+      let numberSelection = Math.floor(Math.random() * 3) + 1;
+      if (numberSelection == 1) {
+        return ("rock")
+      } else if (numberSelection == 2) {
+        return ("paper")
+      } else {
+        return ("scissors")
+      }
+    }
+    let computerSelection = computerPlay();
+    let playerInput = prompt("Choose either rock, paper, or scissors.");
+    let playerSelection = playerInput.toLowerCase();    
+    
+    function playRound() {
+      if (playerSelection == "rock" && computerSelection == "rock") {
+        return ("It's a tie! Rock equals Rock!");
+      } else if (playerSelection == "rock" && computerSelection == "paper") {
+        return ("You lose! Paper beats Rock!");
+       } else if (playerSelection == "rock" && computerSelection == "scissors") {
+         return ("You win! Rock beats Scissors!");
+       } else if (playerSelection == "paper" && computerSelection == "rock") {
+         return ("You win! Paper beats Rock!");
+       } else if (playerSelection == "paper" && computerSelection == "paper") {
+         return ("It's a tie! Paper equals Paper!");
+       } else if (playerSelection == "paper" && computerSelection == "scissors") {
+         return ("You lose! Scissors beats Paper!");
+       } else if (playerSelection == "scissors" && computerSelection == "rock") {
+         return ("You lose! Rock beats Scissors!");
+       } else if (playerSelection == "scissors" && computerSelection == "paper") {
+         return ("You win! Scissors beats Paper!");
+       } else if (playerSelection == "scissors" && computerSelection == "scissors") {
+         return ("It's a tie! Scissors equals Scissors!");
+       }
+      }
   </script>
 </body>
 </html>
