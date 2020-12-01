@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <titl>Page Title</title>
+  <title>Page Title</title>
   <meta charset="UTF-8"/>
 </head>
 <body>
@@ -60,10 +60,50 @@
        }
     function game() {
     
+    // I ran the playRound() function  5 times because as of writing this I do not know how to utilize loops!
+    
+    // Because of this there is also the possibility of a stalemate in just the 5 rounds.
+     
      let computerSelection = computerPlay();
      let playerInput = prompt("Choose either rock, paper, or scissors.");
      let playerSelection = playerInput.toLowerCase();
 
+      playRound(computerSelection, playerSelection);
+      
+      computerSelection = computerPlay();
+      playerInput = prompt("Choose either rock, paper, or scissors.");
+      playerSelection = playerInput.toLowerCase();
+      
+      playRound(computerSelection, playerSelection);
+
+      computerSelection = computerPlay();
+      playerInput = prompt("Choose either rock, paper, or scissors.");
+      playerSelection = playerInput.toLowerCase();
+      
+      playRound(computerSelection, playerSelection);
+      
+      if (playerScore == 3) {
+        return( "You won the game!");
+       }
+      if (computerScore == 3) {
+        return("You lost the game!");
+    }
+      computerSelection = computerPlay();
+      playerInput = prompt("Choose either rock, paper, or scissors.");
+      playerSelection = playerInput.toLowerCase();
+      
+      playRound(computerSelection, playerSelection);
+
+      if (playerScore == 3) {
+        return( "You won the game!");
+       }
+      if (computerScore == 3) {
+        return("You lost the game!");
+    }
+      computerSelection = computerPlay();
+      playerInput = prompt("Choose either rock, paper, or scissors.");
+      playerSelection = playerInput.toLowerCase();
+      
       playRound(computerSelection, playerSelection);
       
       if (playerScore == 3) {
