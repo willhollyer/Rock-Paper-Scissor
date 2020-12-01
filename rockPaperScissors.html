@@ -7,7 +7,9 @@
 <body>
   <script>
     let options = ["rock", "paper", "scissors"];
-
+    playerScore = 0;
+    computerScore = 0;
+    
     function computerPlay() {
       let choice = options[Math.floor(Math.random() * options.length)];
       return choice;
@@ -53,25 +55,24 @@
          console.log ("You submitted " + playerSelection + ". Please choose a valid move!") }
          
       console.log(playerScore, computerScore);
-      }
+      
 
+       }
     function game() {
     
-     playerScore = 0;
-     computerScore = 0;
      let computerSelection = computerPlay();
      let playerInput = prompt("Choose either rock, paper, or scissors.");
      let playerSelection = playerInput.toLowerCase();
 
-      
-      if (playerScore === 3) {
-        return( "You won the game!");
-      }
-      if (computerScore === 3) {
-        return("You lost the game!");
-      }
       playRound(computerSelection, playerSelection);
+      
+      if (playerScore == 3) {
+        return( "You won the game!");
+       }
+      if (computerScore == 3) {
+        return("You lost the game!");
     }
+  }
   </script>
 </body>
 </html>
